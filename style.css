@@ -108,3 +108,35 @@ section {
   cursor: pointer;
   display: none;
 }
+
+
+.home {
+  background-image: ;
+}
+
+.fb-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fb-page > .image img{
+  height: 150px;
+  width: 150px;
+}
+
+.fb-page > .head-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fb-page > .head-text h6{
+  font-size: 30px;
+  font-weight: normal;
+}
+.fb-page > .head-text p {
+  font-size: 15px;
+}
