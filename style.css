@@ -32,10 +32,9 @@ html {
 }
 
 section {
-  min-height: 100vh;
-  padding: 8rem 30% 2rem;
+  padding: 10rem 9% 1rem;
+  overflow: hidden;
 }
-
 
 .header {
   width: 100%;
@@ -48,9 +47,6 @@ section {
   align-items: center;
   z-index: 90;
   background-color: green;
-
-  /* background-color: rebeccapurple; */
-  /* background-color: rgba(0, 0, 0, 0.2); */
   backdrop-filter: blur(50px);
 }
 .header::after {
@@ -109,9 +105,11 @@ section {
   display: none;
 }
 
+/* HOME SECTION DESIGN */
 
 .home {
-  background-image: ;
+  background: url(/Image/Sfinal-min.png);
+  height: 450px;
 }
 
 .fb-page {
@@ -119,11 +117,19 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 
-.fb-page > .image img{
+.fb-page > .image img {
   height: 150px;
   width: 150px;
+  background: rgba(255, 255, 255, 0.1);
+
+  transition: 0.5s;
+}
+.fb-page > .image img:hover {
+  cursor: pointer;
+  transform: scale(1.06);
 }
 
 .fb-page > .head-text {
@@ -131,12 +137,35 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  background-color: var(--secund-bg-color);
+  color: var(--text-color);
+  width: 600px;
+  padding: 20px 20px;
+  border-radius: 10px;
 }
 
-.fb-page > .head-text h6{
+.fb-page > .head-text h6 {
   font-size: 30px;
   font-weight: normal;
 }
 .fb-page > .head-text p {
   font-size: 15px;
+}
+
+/* 2nd SECTION */
+
+.news-topic {
+  display: grid;
+  grid-template-columns: 219px 219px 219px 219px;
+  grid-template-rows: 67.5px 67.5px 67.5px 67.5px;
+  gap: 2rem;
+}
+.topic {
+  background-color: var(--secund-bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
