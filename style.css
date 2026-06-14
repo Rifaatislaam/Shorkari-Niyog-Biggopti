@@ -21,7 +21,7 @@
 
 :root {
   --bg-color: #081b29;
-  --main-color: #48e655;
+  --main-color: rgb(44, 146, 44);
   --text-color: #ededed;
   --secund-bg-color: #112e42;
 }
@@ -110,6 +110,7 @@ section {
 .home {
   background: url(/Image/Sfinal-min.png);
   height: 450px;
+  position: relative;
 }
 
 .fb-page {
@@ -117,12 +118,12 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .fb-page > .image img {
-  height: 150px;
-  width: 150px;
+  height: 110px;
+  width: 110px;
   background: rgba(255, 255, 255, 0.1);
 
   transition: 0.5s;
@@ -138,10 +139,10 @@ section {
   align-items: center;
   justify-content: center;
 
-  background-color: var(--secund-bg-color);
+  background-color: var(--main-color);
   color: var(--text-color);
-  width: 600px;
-  padding: 20px 20px;
+  width: 500px;
+  padding: 10px 10px;
   border-radius: 10px;
 }
 
@@ -161,19 +162,42 @@ section {
   grid-template-rows: 67.5px 67.5px 67.5px 67.5px;
   gap: 2rem;
 
-  margin-top: -9rem;
+  margin-top: -15rem;
+  position: absolute;
 }
 .topic {
-  background-color: var(--secund-bg-color);
+  background-color: rgb(44, 146, 44);
   color: var(--text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 10px;
+  gap: 5px;
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.15);
+  transition: 0.5s;
 }
-
+.topic:hover {
+  cursor: pointer;
+  transform: scale(1.06);
+}
 .topic > .icon i {
-  color: var(--main-color);
+  color: var(--secund-bg-color);
   font-size: 20px;
+}
+.topic > .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.topic > .text p {
+  color: var(--secund-bg-color);
+  font-size: 15px;
+  font-weight: bold;
+}
+.topic > .text span {
+  color: var(--text-color);
+  font-weight: normal;
 }
