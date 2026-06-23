@@ -161,6 +161,8 @@ section {
 .fb-page > .head-text h6 {
   font-size: 30px;
   font-weight: normal;
+  -webkit-text-stroke: 0.5px #000;
+  color: transparent;
 }
 .fb-page > .head-text p {
   font-size: 15px;
