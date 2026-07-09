@@ -21,9 +21,11 @@
 
 :root {
   --bg-color: #081b29;
-  --main-color: rgb(44, 146, 44);
+  --main-color: #1e3a5f;
   --text-color: #ededed;
-  --secund-bg-color: #112e42;
+  --secund-bg-color: #1e3a5f;
+
+  --span-color: #2fe42f;
 }
 
 html {
@@ -46,7 +48,7 @@ section {
   justify-content: space-between;
   align-items: center;
   z-index: 90;
-  background-color: green;
+  background-color: #1e3a5f;
   backdrop-filter: blur(50px);
 }
 .header::after {
@@ -160,12 +162,12 @@ section {
 .fb-page > .head-text h6 {
   font-size: 30px;
   font-weight: normal;
-  /* -webkit-text-stroke: 0.5px #000; */
   color: #000;
   text-decoration: bold;
 }
 .fb-page > .head-text p {
   font-size: 15px;
+  color: var(--bg-color);
 }
 
 /* 2nd SECTION */
@@ -180,7 +182,7 @@ section {
   position: absolute;
 }
 .topic {
-  background-color: #369666;
+  background-color: #1e3a5f;
   color: var(--text-color);
   display: flex;
   flex-direction: column;
@@ -191,7 +193,7 @@ section {
   border-radius: 10px;
   box-shadow: rgba(255, 255, 255, 0.15);
   transition: 0.5s;
-
+  border: 2px solid var(--span-color);
   overflow: hidden;
 }
 
@@ -221,7 +223,7 @@ section {
   transform: scale(1.06);
 }
 .topic > .icon i {
-  color: var(--secund-bg-color);
+  color: var(--text-color);
   font-size: 20px;
 }
 .topic > .text {
@@ -231,11 +233,135 @@ section {
   justify-content: center;
 }
 .topic > .text p {
-  color: var(--secund-bg-color);
+  color: var(--text-color);
   font-size: 15px;
   font-weight: bold;
 }
 .topic > .text span {
-  color: var(--text-color);
+  color: var(--span-color);
   font-weight: normal;
+}
+
+/* ---------------------------------------
+            BODY SECTION DESIGN 
+-----------------------------------------*/
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #1e3a5f;
+  color: var(--text-color);
+
+  height: 250px;
+  border: 2px solid var(--span-color);
+  border-radius: 10px;
+}
+
+/* ~~~~~~~~~~~~~ LOGO DESIGN ~~~~~~~~~~~~~*/
+
+.logo-section img {
+  object-fit: cover;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* ~~~~~~~~~~~~~ TITLE DESIGN ~~~~~~~~~~~~~*/
+
+.title-section h5 {
+  font-size: 2.2rem;
+}
+.title-section p {
+  font-size: 1.5rem;
+}
+.title-section p span {
+  color: var(--span-color);
+}
+
+/* ~~~~~~~~~~~~~ BUTTON DESIGN ~~~~~~~~~~~~~*/
+
+.button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.button-section a {
+  padding: 1rem 2rem;
+  background-color: var(--span-color);
+  border: none;
+  color: var(--main-color);
+  border-radius: 1000px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.button-section a::after {
+  content: "";
+  position: absolute;
+  width: 107%;
+  height: 107%;
+  border-radius: 1000px;
+  background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+  z-index: -1;
+}
+
+.button-section a:hover {
+  z-index: 0;
+  box-shadow: 40px 0 100px #008cff;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* ~~~~~~~~~~~~~ SOCIAL DESIGN ~~~~~~~~~~~~~*/
+
+.social-section {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social-section a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid var(--span-color);
+  background-color: transparent;
+  border-radius: 50%;
+  color: var(--span-color);
+  background-color: var(--secund-bg-color);
+  font-size: 2rem;
+  font-weight: 400;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.social-section a::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background-color: var(--span-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.social-section a:hover::before {
+  width: 100%;
+  color: var(--secund-bg-color);
+}
+
+.social-section a:hover {
+  color: var(--secund-bg-color);
 }
