@@ -252,8 +252,8 @@ section {
   justify-content: space-around;
   background-color: #1e3a5f;
   color: var(--text-color);
-
   height: 250px;
+  margin-top: 20px;
   border: 2px solid var(--span-color);
   border-radius: 10px;
 }
