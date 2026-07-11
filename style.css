@@ -586,6 +586,10 @@ form input {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 @media (max-width: 575px) {
+  .header {
+    display: none;
+  }
+
   .home {
     z-index: -1;
   }
@@ -625,7 +629,6 @@ form input {
     margin-top: -30px;
     margin-bottom: 20px;
   }
-
 
   .footer > .row {
     display: flex;
